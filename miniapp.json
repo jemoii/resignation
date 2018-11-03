@@ -1,77 +1,5 @@
-[
-    {
-        "desc":"你有没有足够的资金维持自己下半生的生活？",
-        "name":"enough_money",
-        "nextStringMap":{
-            "not_have":"support",
-            "have":"sure"
-        },
-        "options":[
-            {
-                "desc":"无",
-                "name":"not_have"
-            },
-            {
-                "desc":"有",
-                "name":"have"
-            }
-        ]
-    },
-    {
-        "desc":"你肯定？",
-        "name":"sure",
-        "nextStringMap":{
-            "no":"new_job",
-            "yes":"good_luck"
-        },
-        "options":[
-            {
-                "desc":"No",
-                "name":"no"
-            },
-            {
-                "desc":"Yes",
-                "name":"yes"
-            }
-        ]
-    },
-    {
-        "desc":"有没人会养你下半生？",
-        "name":"support",
-        "nextStringMap":{
-            "no":"new_job",
-            "yes":"trust"
-        },
-        "options":[
-            {
-                "desc":"No",
-                "name":"no"
-            },
-            {
-                "desc":"Yes",
-                "name":"yes"
-            }
-        ]
-    },
-    {
-        "desc":"找到新工作了吗？",
-        "name":"new_job",
-        "nextStringMap":{
-            "no":"why",
-            "yes":"want_to_do"
-        },
-        "options":[
-            {
-                "desc":"No",
-                "name":"no"
-            },
-            {
-                "desc":"Yes",
-                "name":"yes"
-            }
-        ]
-    },
-    {
+{
+    "trust":{
         "desc":"信得过吗？",
         "name":"trust",
         "nextStringMap":{
@@ -89,20 +17,171 @@
             }
         ]
     },
-    {
-        "desc":"真的想做？",
-        "name":"want_to_do",
+    "good_luck":{
+        "desc":"不再想了，辞职啦！",
+        "name":"good_luck",
         "nextStringMap":{
-            "yes":"new_job"
+
         },
         "options":[
+
+        ]
+    },
+    "wait":{
+        "desc":"再做几个月看看？",
+        "name":"wait",
+        "nextStringMap":{
+            "never":"good_luck",
+            "all_right":"after_wait"
+        },
+        "options":[
+            {
+                "desc":"决不",
+                "name":"never"
+            },
+            {
+                "desc":"好吧",
+                "name":"all_right"
+            }
+        ]
+    },
+    "still":{
+        "desc":"还要辞职吗？",
+        "name":"still",
+        "nextStringMap":{
+            "no":"wait",
+            "yes":"regret"
+        },
+        "options":[
+            {
+                "desc":"No",
+                "name":"no"
+            },
             {
                 "desc":"Yes",
                 "name":"yes"
             }
         ]
     },
-    {
+    "must_leave":{
+        "desc":"一定要辞职才能追到？",
+        "name":"must_leave",
+        "nextStringMap":{
+            "no":"wait",
+            "yes":"good_luck"
+        },
+        "options":[
+            {
+                "desc":"No",
+                "name":"no"
+            },
+            {
+                "desc":"Yes",
+                "name":"yes"
+            }
+        ]
+    },
+    "comm":{
+        "desc":"跟老板谈一下，谈的怎样？",
+        "name":"comm",
+        "nextStringMap":{
+            "bad":"new_job",
+            "soso":"still"
+        },
+        "options":[
+            {
+                "desc":"不要提了",
+                "name":"bad"
+            },
+            {
+                "desc":"还好",
+                "name":"soso"
+            }
+        ]
+    },
+    "sure":{
+        "desc":"你肯定？",
+        "name":"sure",
+        "nextStringMap":{
+            "no":"new_job",
+            "yes":"good_luck"
+        },
+        "options":[
+            {
+                "desc":"No",
+                "name":"no"
+            },
+            {
+                "desc":"Yes",
+                "name":"yes"
+            }
+        ]
+    },
+    "regret":{
+        "desc":"辞职了会后悔吗？",
+        "name":"regret",
+        "nextStringMap":{
+            "no":"good_luck",
+            "yes":"wait"
+        },
+        "options":[
+            {
+                "desc":"No",
+                "name":"no"
+            },
+            {
+                "desc":"Yes",
+                "name":"yes"
+            }
+        ]
+    },
+    "again":{
+        "desc":"那为何又再绕到这里呢？",
+        "name":"again",
+        "nextStringMap":{
+            "not_happy":"comm",
+            "will":"good_luck",
+            "dream":"must_leave",
+            "low_salary":"comm"
+        },
+        "options":[
+            {
+                "desc":"做得不开心",
+                "name":"not_happy"
+            },
+            {
+                "desc":"纯粹想走",
+                "name":"will"
+            },
+            {
+                "desc":"追梦想",
+                "name":"dream"
+            },
+            {
+                "desc":"人工不够高",
+                "name":"low_salary"
+            }
+        ]
+    },
+    "after_wait":{
+        "desc":"做得怎样？",
+        "name":"after_wait",
+        "nextStringMap":{
+            "not_good":"still",
+            "soso":"again"
+        },
+        "options":[
+            {
+                "desc":"不好",
+                "name":"not_good"
+            },
+            {
+                "desc":"还好",
+                "name":"soso"
+            }
+        ]
+    },
+    "why":{
         "desc":"老实说，为什么想辞职",
         "name":"why",
         "nextStringMap":{
@@ -130,47 +209,11 @@
             }
         ]
     },
-    {
-        "desc":"跟老板谈一下，谈的怎样？",
-        "name":"comm",
+    "want_to_do":{
+        "desc":"真的想做？",
+        "name":"want_to_do",
         "nextStringMap":{
-            "bad":"new_job",
-            "soso":"still"
-        },
-        "options":[
-            {
-                "desc":"不要提了",
-                "name":"bad"
-            },
-            {
-                "desc":"还好",
-                "name":"soso"
-            }
-        ]
-    },
-    {
-        "desc":"一定要辞职才能追到？",
-        "name":"must_leave",
-        "nextStringMap":{
-            "no":"wait",
-            "yes":"good_luck"
-        },
-        "options":[
-            {
-                "desc":"No",
-                "name":"no"
-            },
-            {
-                "desc":"Yes",
-                "name":"yes"
-            }
-        ]
-    },
-    {
-        "desc":"还要辞职吗？",
-        "name":"still",
-        "nextStringMap":{
-            "no":"wait",
+            "no":"new_job",
             "yes":"regret"
         },
         "options":[
@@ -184,12 +227,30 @@
             }
         ]
     },
-    {
-        "desc":"辞职了会后悔吗？",
-        "name":"regret",
+    "enough_money":{
+        "desc":"你有没有足够的资金维持自己下半生的生活？",
+        "name":"enough_money",
         "nextStringMap":{
-            "no":"good_luck",
-            "yes":"wait"
+            "not_have":"support",
+            "have":"sure"
+        },
+        "options":[
+            {
+                "desc":"无",
+                "name":"not_have"
+            },
+            {
+                "desc":"有",
+                "name":"have"
+            }
+        ]
+    },
+    "support":{
+        "desc":"有没人会养你下半生？",
+        "name":"support",
+        "nextStringMap":{
+            "no":"new_job",
+            "yes":"trust"
         },
         "options":[
             {
@@ -202,60 +263,22 @@
             }
         ]
     },
-    {
-        "desc":"再做几个月看看？",
-        "name":"wait",
+    "new_job":{
+        "desc":"找到新工作了吗？",
+        "name":"new_job",
         "nextStringMap":{
-            "never":"good_luck",
-            "all_right":"after_wait"
+            "no":"why",
+            "yes":"want_to_do"
         },
         "options":[
             {
-                "desc":"决不",
-                "name":"never"
+                "desc":"No",
+                "name":"no"
             },
             {
-                "desc":"好吧",
-                "name":"all_right"
+                "desc":"Yes",
+                "name":"yes"
             }
-        ]
-    },
-    {
-        "desc":"那为何又再绕到这里呢？",
-        "name":"again",
-        "nextStringMap":{
-
-        },
-        "options":[
-
-        ]
-    },
-    {
-        "desc":"做得怎样？",
-        "name":"after_wait",
-        "nextStringMap":{
-            "not_good":"still",
-            "soso":"again"
-        },
-        "options":[
-            {
-                "desc":"不好",
-                "name":"not_good"
-            },
-            {
-                "desc":"还好",
-                "name":"soso"
-            }
-        ]
-    },
-    {
-        "desc":"不再想了，辞职啦！",
-        "name":"good_luck",
-        "nextStringMap":{
-
-        },
-        "options":[
-
         ]
     }
-]
+}
